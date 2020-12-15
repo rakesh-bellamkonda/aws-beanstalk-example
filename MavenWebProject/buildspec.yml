@@ -1,0 +1,15 @@
+version: 0.2
+phases:
+  pre_build:
+    commands:
+      - echo "Entered pre-build state"
+  build:
+    commands:
+      - echo "Entered Build phase"
+      - mvn install
+  post_build:
+    commands:
+      - echo "Build completed"
+artifacts:
+  files:
+    - target/MavenWebProject.war
